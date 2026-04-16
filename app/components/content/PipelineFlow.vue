@@ -4,21 +4,21 @@ const colorMode = useColorMode()
 const c = computed(() => {
   const dark = colorMode.value === 'dark'
   return {
-    bg1: dark ? '#0f0f1a' : '#f8f9fc',
-    bg2: dark ? '#1a1a2e' : '#eef0f8',
-    cardBg: dark ? '#0f172a' : '#ffffff',
-    cardStroke: dark ? '#1c1917' : '#e2e8f0',
-    glowStart: dark ? '#f59e0b' : '#b45309',
-    glowMid: dark ? '#fbbf24' : '#d97706',
-    arrow: dark ? '#d97706' : '#b45309',
-    arrowLine: dark ? '#92400e' : '#b45309',
-    numText: dark ? '#f59e0b' : '#b45309',
-    titleText: dark ? '#f1f5f9' : '#1e293b',
-    skillText: dark ? '#4b5563' : '#64748b',
-    divider: dark ? '#1c2026' : '#e2e8f0',
-    gateLabel: dark ? '#57534e' : '#94a3b8',
-    gateValue: dark ? '#f59e0b' : '#b45309',
-    dot: dark ? '#f59e0b' : '#d97706',
+    bg1: dark ? '#0a0a0a' : '#f8f9fc',
+    bg2: dark ? '#111111' : '#eef0f8',
+    cardBg: dark ? '#0d0d0d' : '#ffffff',
+    cardStroke: dark ? '#222222' : '#e2e8f0',
+    glowStart: dark ? '#e8a020' : '#b45309',
+    glowMid: dark ? '#f0be50' : '#d97706',
+    arrow: dark ? '#c47a18' : '#b45309',
+    arrowLine: dark ? '#a05c10' : '#b45309',
+    numText: dark ? '#e8a020' : '#b45309',
+    titleText: dark ? '#e8e8e8' : '#1e293b',
+    skillText: dark ? '#555555' : '#64748b',
+    divider: dark ? '#1e1e1e' : '#e2e8f0',
+    gateLabel: dark ? '#444444' : '#94a3b8',
+    gateValue: dark ? '#e8a020' : '#b45309',
+    dot: dark ? '#e8a020' : '#d97706',
   }
 })
 </script>

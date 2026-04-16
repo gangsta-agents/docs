@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: 'https://gangsta.dev',
+    url: 'https://gangsta.page',
     name: 'Gangsta',
   },
 

@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: Install Gangsta skills on your preferred AI development platform.
+description: Install Gangsta skills on OpenCode, Codex, or Gemini CLI.
 navigation.order: 2
 ---
 
@@ -15,82 +15,73 @@ Gangsta is a skills framework — it doesn't run as a standalone application. In
 ## Prerequisites
 
 - Git
-- An AI coding tool (Claude Code, OpenCode, Codex, Gemini CLI, or Cursor)
+- An AI coding tool: OpenCode, Codex, or Gemini CLI
 - A project directory where you want to use Gangsta
+
+::callout{type="warning" icon="i-lucide-clock"}
+**Claude Code and Cursor support is in progress.** Follow [GitHub](https://github.com/kucherenko/gangsta) for updates.
+::
 
 ## Install for Your Platform
 
+### OpenCode
+
+Tell OpenCode in a new session:
+
+> "Fetch and follow instructions from `https://raw.githubusercontent.com/kucherenko/gangsta/refs/heads/master/.opencode/INSTALL.md`"
+
+That's it — OpenCode will clone the repo, configure the plugin, and set up the skills path automatically.
+
+**Prefer a manual install?**
+
 ::code-group
 
-```bash [Claude Code]
-# 1. Clone the Gangsta repo
-git clone https://github.com/kucherenko/gangsta.git ~/gangsta
+```bash [1. Clone]
+git clone https://github.com/kucherenko/gangsta.git ~/.gangsta
+```
 
-# 2. Add the skills path to your Claude Code config
-# Edit ~/.claude/settings.json (or your project's .claude/settings.json)
-# Add under "mcpServers" or the appropriate config key:
+```json [2. opencode.json]
 {
-  "mcpServers": {},
+  "plugin": ["gangsta@file:///Users/you/.gangsta"],
   "skills": {
-    "paths": ["~/gangsta/skills"]
+    "paths": ["~/.gangsta/skills"]
   }
 }
-
-# 3. Restart Claude Code
-```
-
-```bash [OpenCode]
-# 1. Clone the Gangsta repo
-git clone https://github.com/kucherenko/gangsta.git ~/gangsta
-
-# 2. Create or edit opencode.json in your project root
-# Add the Gangsta plugin with skills path:
-{
-  "plugins": {
-    "gangsta": {
-      "source": "~/gangsta"
-    }
-  },
-  "skills": {
-    "paths": ["~/gangsta/skills"]
-  }
-}
-
-# 3. Restart OpenCode
-```
-
-```bash [Codex]
-# 1. Clone the Gangsta repo
-git clone https://github.com/kucherenko/gangsta.git ~/gangsta
-
-# 2. Symlink skills to the Codex skills directory
-mkdir -p ~/.agents/skills
-ln -s ~/gangsta/skills/gangsta ~/.agents/skills/gangsta
-
-# 3. Restart Codex
-```
-
-```bash [Gemini CLI]
-# Install directly via the Gemini extensions registry
-gemini extensions install https://github.com/kucherenko/gangsta
-
-# This handles cloning, path configuration, and registration automatically
-```
-
-```bash [Cursor]
-# 1. Clone the Gangsta repo
-git clone https://github.com/kucherenko/gangsta.git ~/gangsta
-
-# 2. Follow the Claude Code installation steps
-# Cursor uses the same conventions as Claude Code for skill registration
-
-# 3. In Cursor settings, add the skills path:
-#    ~/gangsta/skills
-
-# 4. Restart Cursor
 ```
 
 ::
+
+Replace `/Users/you/.gangsta` with your actual clone path. The `~` shorthand works in `skills.paths`. Restart OpenCode after saving.
+
+---
+
+### Codex
+
+Tell Codex in a new session:
+
+> "Fetch and follow instructions from `https://raw.githubusercontent.com/kucherenko/gangsta/refs/heads/master/.codex/INSTALL.md`"
+
+**Prefer a manual install?**
+
+```bash
+git clone https://github.com/kucherenko/gangsta.git ~/.gangsta
+mkdir -p ~/.agents/skills
+ln -sf ~/.gangsta/skills ~/.agents/skills/gangsta
+```
+
+Restart Codex — skills are discovered automatically from `SKILL.md` frontmatter.
+
+---
+
+### Gemini CLI
+
+```bash
+gemini extensions install https://github.com/kucherenko/gangsta
+```
+
+This handles cloning, path configuration, and registration automatically.
+
+---
 
 ## Verify Installation
 
@@ -116,8 +107,8 @@ To update Gangsta skills to the latest version:
 
 ::code-group
 
-```bash [Git Clone (All Platforms)]
-cd ~/gangsta
+```bash [All Platforms]
+cd ~/.gangsta
 git pull origin main
 ```
 

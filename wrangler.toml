@@ -1,5 +1,3 @@
-name = "gangsta-site"
+name = "gangsta"
+pages_build_output_dir = "dist"
 compatibility_date = "2025-04-01"
-
-[site]
-bucket = ".output/public"

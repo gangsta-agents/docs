@@ -2,7 +2,7 @@ export default defineAppConfig({
   docus: {
     title: 'Gangsta',
     description: 'Spec-Driven Development for AI Agents — The Framework that runs like organized crime.',
-    url: 'https://gangsta.dev',
+    url: 'https://gangsta.page',
     image: '/og-image.png',
     github: {
       owner: 'kucherenko',

@@ -112,44 +112,44 @@ const c = computed(() => {
   const dark = colorMode.value === 'dark'
   return {
     // Background
-    bg1:         dark ? '#0f0f1a' : '#f8f9fc',
-    bg2:         dark ? '#1a1a2e' : '#eef0f8',
+    bg1:         dark ? '#0a0a0a' : '#f8f9fc',
+    bg2:         dark ? '#111111' : '#eef0f8',
     // Card
-    cardBg:      dark ? '#0f172a' : '#ffffff',
-    cardStroke:  dark ? '#1c1917' : '#e2e8f0',
+    cardBg:      dark ? '#0d0d0d' : '#ffffff',
+    cardStroke:  dark ? '#222222' : '#e2e8f0',
     // Glow
-    glowStart:   dark ? '#f59e0b' : '#b45309',
-    glowMid:     dark ? '#fbbf24' : '#d97706',
+    glowStart:   dark ? '#e8a020' : '#b45309',
+    glowMid:     dark ? '#f0be50' : '#d97706',
     // Don
-    donBorder:   dark ? '#f59e0b' : '#b45309',
-    donGlow:     dark ? '#f59e0b' : '#b45309',
-    donTitle:    dark ? '#f59e0b' : '#b45309',
-    donSubtitle: dark ? '#d97706' : '#92400e',
+    donBorder:   dark ? '#e8a020' : '#b45309',
+    donGlow:     dark ? '#e8a020' : '#b45309',
+    donTitle:    dark ? '#e8a020' : '#b45309',
+    donSubtitle: dark ? '#c47a18' : '#92400e',
     // Connector & dot
-    connector:   dark ? '#92400e' : '#b45309',
-    dot:         dark ? '#d97706' : '#d97706',
+    connector:   dark ? '#a05c10' : '#b45309',
+    dot:         dark ? '#c47a18' : '#d97706',
     // Consigliere
-    consBorder:  dark ? '#f59e0b' : '#b45309',
-    consTitle:   dark ? '#fbbf24' : '#92400e',
+    consBorder:  dark ? '#e8a020' : '#b45309',
+    consTitle:   dark ? '#f0be50' : '#92400e',
     // Text helpers
-    skillText:   dark ? '#4b5563' : '#64748b',
-    outsideNote: dark ? '#57534e' : '#94a3b8',
+    skillText:   dark ? '#555555' : '#64748b',
+    outsideNote: dark ? '#444444' : '#94a3b8',
     // Underboss
-    underbossTitle: dark ? '#fcd34d' : '#b45309',
-    capoTitle:      dark ? '#e5c677' : '#92400e',
-    accentBar:   dark ? '#d97706' : '#d97706',
+    underbossTitle: dark ? '#f0be50' : '#b45309',
+    capoTitle:      dark ? '#d4a030' : '#92400e',
+    accentBar:   dark ? '#c47a18' : '#d97706',
     // Ledger
-    ledgerTitle: dark ? '#fcd34d' : '#b45309',
-    ledgerIcon:  dark ? '#f59e0b' : '#b45309',
+    ledgerTitle: dark ? '#f0be50' : '#b45309',
+    ledgerIcon:  dark ? '#e8a020' : '#b45309',
     // Soldiers
-    soldierBg:    dark ? '#0c0c16' : '#f1f5f9',
-    soldierStroke: dark ? '#334155' : '#cbd5e1',
-    soldierAccent: dark ? '#334155' : '#cbd5e1',
-    soldierTitle:  dark ? '#94a3b8' : '#64748b',
-    soldierSub:    dark ? '#475569' : '#94a3b8',
+    soldierBg:    dark ? '#080808' : '#f1f5f9',
+    soldierStroke: dark ? '#2a2a2a' : '#cbd5e1',
+    soldierAccent: dark ? '#2a2a2a' : '#cbd5e1',
+    soldierTitle:  dark ? '#888888' : '#64748b',
+    soldierSub:    dark ? '#555555' : '#94a3b8',
     // Misc
-    crown:           dark ? '#f59e0b' : '#b45309',
-    underbossStroke: dark ? '#92400e' : '#b45309',
+    crown:           dark ? '#e8a020' : '#b45309',
+    underbossStroke: dark ? '#a05c10' : '#b45309',
   }
 })
 </script>

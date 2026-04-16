@@ -190,8 +190,8 @@ navigation.icon: i-heroicons-bolt
 Gangsta provides **20 skills** organized into three categories:
 
 ::callout{type="info"}
-Skills are automatically served at \`/.well-known/skills/\` for AI agent installation.
-Install all skills with: \`npx skills add https://gangsta.dev\`
+Skills are automatically served at \`/.well-known/skills/\` for AI agent discovery.
+See the [installation guide](/getting-started/installation) for how to install Gangsta on your platform.
 ::
 
 ## Hierarchy Roles

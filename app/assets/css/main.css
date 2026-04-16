@@ -43,21 +43,22 @@
 
 /* ── Dark mode overrides ── */
 .dark {
-  --site-bg: #050505;
+  --site-bg: oklch(0.055 0 0);
   --site-fg: oklch(0.930 0.005 240);
-  --site-surface: oklch(0.042 0.003 250);
+  --site-surface: oklch(0.068 0.003 250);
+  --site-surface-raised: oklch(0.10 0.003 250);
   --site-accent: oklch(0.780 0.188 70);
   --site-accent-hover: oklch(0.840 0.158 74);
   --site-heading-h1h2: oklch(0.840 0.158 74);
   --site-heading-h3h4: oklch(0.65 0.012 240);
   --site-link: oklch(0.780 0.188 70);
   --site-link-hover: oklch(0.840 0.158 74);
-  --site-border: oklch(0.25 0.005 250);
+  --site-border: oklch(0.20 0.006 250);
   --site-phase-bg: oklch(0.12 0.005 250);
   --site-phase-border: oklch(0.780 0.188 70);
   --site-code-text: oklch(0.780 0.188 70);
   --site-code-bg: oklch(0.780 0.188 70 / 0.08);
-  --ui-background: oklch(0.042 0.003 250);
+  --ui-background: oklch(0.055 0 0);
   --ui-foreground: oklch(0.930 0.005 240);
   color-scheme: dark;
 }
@@ -81,12 +82,16 @@ html::before {
 }
 
 html.dark::before {
-  opacity: 0.035;
+  opacity: 0.04;
 }
 
 /* ── Gold glow utilities ── */
 .gold-glow {
   box-shadow: 0 0 20px oklch(0.780 0.188 70 / 0.15), 0 0 60px oklch(0.780 0.188 70 / 0.05);
+}
+
+.dark .gold-glow {
+  box-shadow: 0 0 24px oklch(0.780 0.188 70 / 0.20), 0 0 80px oklch(0.780 0.188 70 / 0.08);
 }
 
 .gold-glow-subtle {

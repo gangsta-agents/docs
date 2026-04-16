@@ -7,7 +7,7 @@
   "scripts": {
     "sync": "tsx scripts/sync-skills.ts",
     "dev": "nuxt dev",
-    "build": "npm run sync && nuxt generate",
+    "build": "nuxt generate",
     "preview": "npx serve .output/public"
   },
   "dependencies": {

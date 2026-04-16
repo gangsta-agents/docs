@@ -66,9 +66,9 @@ Every agent knows its role. Every task has a phase. Every phase gate requires th
 
   :::u-page-feature{icon="i-lucide-terminal" to="/getting-started/installation"}
   #title
-  5 Platform Support
+  3 Platforms Supported
   #description
-  Works with Claude Code, OpenCode, Codex, Gemini CLI, and Cursor. Same skills, every platform.
+  OpenCode, Codex, and Gemini CLI are fully supported. Claude Code and Cursor support is in progress.
   :::
 
   :::u-page-feature{icon="i-lucide-book-open" to="/core-concepts/the-ledger"}
@@ -116,23 +116,15 @@ Understand the Hierarchy
 Run on any AI platform.
 
 #description
-One command installs all 20 skills. Your agent gets the full Borgata.
+Install once, invoke everywhere. Your agent gets the full Borgata.
 
-::callout{type="info"}
-```bash
-npx skills add https://gangsta.dev
-```
-::
-
-Skills are auto-discovered and installed to your AI tool's skills directory. No manual configuration needed.
-
-| Platform | Install |
-|----------|---------|
-| Claude Code | `npx skills add https://gangsta.dev --agent claude-code` |
-| OpenCode | `npx skills add https://gangsta.dev --agent opencode` |
-| Codex | `npx skills add https://gangsta.dev --agent codex` |
-| Gemini CLI | `gemini extensions install https://github.com/kucherenko/gangsta` |
-| Cursor | `npx skills add https://gangsta.dev --agent cursor` |
+| Platform | Status | Install |
+|----------|--------|---------|
+| OpenCode | ✅ Supported | Tell OpenCode: *"Fetch and follow instructions from `https://raw.githubusercontent.com/kucherenko/gangsta/refs/heads/master/.opencode/INSTALL.md`"* |
+| Codex | ✅ Supported | Tell Codex: *"Fetch and follow instructions from `https://raw.githubusercontent.com/kucherenko/gangsta/refs/heads/master/.codex/INSTALL.md`"* |
+| Gemini CLI | ✅ Supported | `gemini extensions install https://github.com/kucherenko/gangsta` |
+| Claude Code | 🚧 In Progress | [Check GitHub for updates](https://github.com/kucherenko/gangsta) |
+| Cursor | 🚧 In Progress | [Check GitHub for updates](https://github.com/kucherenko/gangsta) |
 
 ::
 

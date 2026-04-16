@@ -1,0 +1,13 @@
+---
+heist: gangsta-site-cicd
+phase: laundering
+status: completed
+timestamp: 2026-04-16T00:00:00Z
+next-action: Heist complete. Ready for Don's final approval.
+artifacts:
+  - .github/workflows/deploy.yml
+  - wrangler.toml (pages_build_output_dir corrected)
+  - docs/gangsta/gangsta-site-cicd/specs/2026-04-16-contract.md
+  - docs/gangsta/gangsta-site-cicd/plans/2026-04-16-war-plan.md
+  - docs/gangsta/gangsta-site-cicd/recon/2026-04-16-recon-dossier.md
+---
