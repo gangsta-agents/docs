@@ -13,9 +13,9 @@
           <stop offset="70%"  :stop-color="c.glowMid"   stop-opacity="0.9"/>
           <stop offset="100%" :stop-color="c.glowStart" stop-opacity="0"/>
         </linearGradient>
-        <!-- Downward arrowhead -->
-        <marker id="ht-arr" markerWidth="7" markerHeight="6" refX="3.5" refY="6" orient="auto">
-          <polygon points="0 0, 7 0, 3.5 6" :fill="c.connector"/>
+        <!-- Arrowhead — rightward in local space, orient=auto rotates to match path direction -->
+        <marker id="ht-arr" viewBox="0 0 10 10" markerWidth="7" markerHeight="7" refX="9" refY="5" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 z" :fill="c.connector"/>
         </marker>
         <!-- Don glow filter -->
         <filter id="ht-glow" x="-25%" y="-25%" width="150%" height="150%">
@@ -41,18 +41,18 @@
       <text x="480" y="101" text-anchor="middle" font-size="10.5" :fill="c.donSubtitle" font-style="italic" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">Supreme authority</text>
 
       <!-- ── CONNECTORS: Don → Level 2 ─────────────────────────────── -->
-      <!-- Drop from Don bottom -->
-      <line x1="480" y1="112" x2="480" y2="135" :stroke="c.connector" stroke-width="1.5"/>
+      <!-- Drop from Don bottom to horizontal bus -->
+      <line x1="480" y1="112" x2="480" y2="128" :stroke="c.connector" stroke-width="1.5"/>
       <!-- Horizontal bus -->
-      <line x1="210" y1="135" x2="750" y2="135" :stroke="c.connector" stroke-width="1.5"/>
-      <!-- Drops with arrowheads to each child -->
-      <line x1="210" y1="135" x2="210" y2="150" :stroke="c.connector" stroke-width="1.5" marker-end="url(#ht-arr)"/>
-      <line x1="480" y1="135" x2="480" y2="150" :stroke="c.connector" stroke-width="1.5" marker-end="url(#ht-arr)"/>
-      <line x1="750" y1="135" x2="750" y2="150" :stroke="c.connector" stroke-width="1.5" marker-end="url(#ht-arr)"/>
+      <line x1="210" y1="128" x2="750" y2="128" :stroke="c.connector" stroke-width="1.5"/>
+      <!-- Drops with arrowheads to each child (22 px — enough room for arrowhead) -->
+      <line x1="210" y1="128" x2="210" y2="150" :stroke="c.connector" stroke-width="1.5" marker-end="url(#ht-arr)"/>
+      <line x1="480" y1="128" x2="480" y2="150" :stroke="c.connector" stroke-width="1.5" marker-end="url(#ht-arr)"/>
+      <line x1="750" y1="128" x2="750" y2="150" :stroke="c.connector" stroke-width="1.5" marker-end="url(#ht-arr)"/>
       <!-- Junction dots -->
-      <circle cx="210" cy="135" r="3" :fill="c.dot"/>
-      <circle cx="480" cy="135" r="3" :fill="c.dot"/>
-      <circle cx="750" cy="135" r="3" :fill="c.dot"/>
+      <circle cx="210" cy="128" r="3" :fill="c.dot"/>
+      <circle cx="480" cy="128" r="3" :fill="c.dot"/>
+      <circle cx="750" cy="128" r="3" :fill="c.dot"/>
 
       <!-- ── CONSIGLIERE (dashed — outside chain of command) ─────────── -->
       <rect x="110" y="150" width="200" height="66" :fill="c.cardBg" :stroke="c.consBorder" stroke-width="1.2" stroke-dasharray="5,3" rx="2"/>

@@ -1,0 +1,64 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [master]
+
+# Prevent concurrent deploys. cancel-in-progress: false ensures an
+# in-flight deploy always completes before the next one starts.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read # required by actions/checkout
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4
+        with:
+          node-version-file: .nvmrc
+          cache: 'npm' # caches ~/.npm (tarball cache), compatible with npm ci
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync skills from GitHub
+        run: npm run sync
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate static site
+        run: npx nuxt generate
+
+      - name: Verify build output
+        run: |
+          if [ ! -d "dist" ]; then
+            echo "ERROR: dist directory missing — build failed silently"
+            exit 1
+          fi
+          if [ ! -f "dist/index.html" ]; then
+            echo "ERROR: index.html missing from dist"
+            exit 1
+          fi
+          file_count=$(find dist -type f | wc -l | tr -d ' ')
+          echo "Build output: ${file_count} files in dist"
+          if [ "${file_count}" -lt 20 ]; then
+            echo "ERROR: Suspiciously low file count (${file_count}) — aborting deploy"
+            exit 1
+          fi
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@da0e0dfe58b7a431659754fdf3f186c529afbe65 # v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=gangsta --branch=master
