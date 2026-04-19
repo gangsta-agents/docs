@@ -2,6 +2,7 @@
 title: The Family vs. The Team
 description: Why Gangsta replaces the agile team with the mafia family — and why every member carries more weight, more discipline, and more freedom than any sprint board ever allowed.
 date: 2026-04-18
+navigation: false
 ---
 
 <div style="display:flex;align-items:center;gap:1.5rem;padding:1.25rem 1.5rem;background:var(--site-surface);border:1px solid var(--site-border);border-radius:0.75rem;margin-bottom:2.75rem;">

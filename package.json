@@ -11,10 +11,14 @@
     "preview": "npx serve .output/public"
   },
   "dependencies": {
+    "@nuxt/ui": "^4.6.1",
     "better-sqlite3": "12.6.2",
     "citty": "^0.2.2",
-    "docus": "^5.10.0",
-    "nuxt": "4.3.1"
+    "docus": "^5.8.1",
+    "nuxt": "4.3.1",
+    "tailwindcss": "^4.2.2",
+    "zod": "^3.25.76",
+    "zod-to-json-schema": "^3.25.2"
   },
   "devDependencies": {
     "@octokit/rest": "21.1.1",

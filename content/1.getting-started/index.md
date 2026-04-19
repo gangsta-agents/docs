@@ -72,3 +72,9 @@ At its core, Gangsta enforces **Spec-Driven Development**:
 This isn't just a preference — it's Omerta Law #5. The Heist Pipeline is specifically designed to produce specs before code, debate specs before committing, and verify code against specs before delivery.
 
 [Learn about Omerta Laws →](/core-concepts/omerta)
+
+## New to Mafia Terminology?
+
+Gangsta uses mafia metaphors throughout — Dons, Capos, Omerta, Laundering, and more. If you're unfamiliar with these terms, the glossary covers every one:
+
+[Glossary →](/glossary)

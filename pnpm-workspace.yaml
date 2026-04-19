@@ -1,0 +1,9 @@
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - better-sqlite3
+  - esbuild
+  - sharp
+  - vue-demi
+
+patchedDependencies:
+  '@nuxt/content@3.13.0': patches/@nuxt__content@3.13.0.patch

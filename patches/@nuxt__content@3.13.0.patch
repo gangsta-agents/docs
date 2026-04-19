@@ -1,0 +1,34 @@
+diff --git a/dist/module.mjs b/dist/module.mjs
+index c0d10a26b357bf44546ce3512d039bdb601f43d7..bd24507f5ef43fa68db43955772282594c0717d2 100644
+--- a/dist/module.mjs
++++ b/dist/module.mjs
+@@ -166,9 +166,7 @@ async function getLocalGitRemote(dir) {
+ const nuxtContentContext$1 = {
+   zod3: {
+     toJSONSchema: (_schema, _name) => {
+-      throw new Error(
+-        "It seems you are using Zod version 3 for collection schema, but Zod is not installed, Nuxt Content does not ship with zod, install `zod` and `zod-to-json-schema` and it will work."
+-      );
++      return toJSONSchema(_schema, _name);
+     }
+   },
+   zod4: {
+@@ -2787,6 +2785,7 @@ const cloudflare = definePreset({
+     nitroConfig.publicAssets ||= [];
+     nitroConfig.alias = nitroConfig.alias || {};
+     nitroConfig.handlers ||= [];
++    nitroConfig.alias["#content/dump"] = addTemplate(fullDatabaseCompressedDumpTemplate(manifest)).dst;
+     manifest.collections.map(async (collection) => {
+       if (!collection.private) {
+         addTemplate(collectionDumpTemplate(collection.name, manifest));
+diff --git a/dist/runtime/presets/cloudflare/database-handler.js b/dist/runtime/presets/cloudflare/database-handler.js
+index cdaa3585a45b191b8723efa70cff00cf48801277..81ccc0114d2a1cc42fe84e4cd3f6d057a8ad3625 100644
+--- a/dist/runtime/presets/cloudflare/database-handler.js
++++ b/dist/runtime/presets/cloudflare/database-handler.js
+@@ -10,5 +10,5 @@ export default eventHandler(async (event) => {
+     url.pathname = `${config?.app?.baseURL || "/"}dump.${collection}.sql`;
+     return await ASSETS.fetch(url).then((r) => r.text());
+   }
+-  return await useStorage().getItem(`build:content:raw:dump.${collection}.sql`) || "";
++  return await useStorage().getItem(`build:content:raw:dump.${collection}.sql`) || await import("#content/dump").then((m) => m[collection]) || "";
+ });
