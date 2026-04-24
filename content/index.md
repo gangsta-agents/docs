@@ -170,6 +170,18 @@ Violation of the Five Laws is not a warning — it's a structural failure. The f
 
 ::u-page-section
 #title
+Frequently Asked Questions
+
+#description
+Everything you need to know before joining the Family.
+
+::faq-accordion
+::
+
+::
+
+::u-page-section
+#title
 Get Started
 
 #description
