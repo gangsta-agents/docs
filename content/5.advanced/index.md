@@ -1,10 +1,11 @@
 ---
 title: Advanced Topics
-description: Custom skills, multi-agent patterns, checkpoint recovery, and contributing to Gangsta.
+description: Custom skills, multi-agent patterns, checkpoint recovery, autonomous mode, and contributing to Gangsta.
 navigation.order: 1
 ---
 For users who have mastered the basics and want to go deeper:
 
+- **[Autonomous Mode](/advanced/autonomous-mode)** — Run the Heist Pipeline end-to-end with Don Proxy gate approval
 - **[Artifacts Reference](/advanced/artifacts)** — Every file Gangsta generates, where it lives, and which phase produces it
 - **[Writing Custom Skills](/advanced/custom-skills)** — Create your own Gangsta skills using the SKILL.md format
 - **[Multi-Agent Patterns](/advanced/multi-agent-patterns)** — Use Underboss for task decomposition, Crew Lead for territory orchestration

@@ -49,11 +49,31 @@ Every phase ends with a **gate** — a checkpoint requiring the Don's explicit a
 
 ## Starting a Heist
 
+There are two ways to start a Heist:
+
+### Manual (Gated)
+
 Express a building intention to your AI tool:
 
 > "I want to add user notifications to my app"
 
 The 1% Rule triggers `gangsta:reconnaissance` automatically. From there, each phase flows into the next with your approval at every gate.
+
+### Autonomous Mode
+
+Use the `/gangsta:heist` slash command to run phases 1–4 end-to-end without pausing at each gate:
+
+> `/gangsta:heist user-notifications`
+
+The Don Proxy approves each gate on your behalf. When the Contract and Execution Plan are ready, you sign with `/gangsta:go` to execute phases 5–6. [Full Autonomous Mode docs →](/advanced/autonomous-mode)
+
+## Slash Commands
+
+| Command | Phases | Purpose |
+|---|---|---|
+| `/gangsta:heist <feature>` | 1–4 | Run Reconnaissance through Resource Development autonomously |
+| `/gangsta:go [feature]` | 5–6 | Sign the Contract and execute The Hit + The Delivery |
+| `/gangsta:abort <feature>` | — | Halt the Heist and archive it |
 
 ## Resuming a Heist
 
@@ -73,7 +93,7 @@ Reconnaissance → The Grilling → The Sit-Down → Resource Dev → Execution 
      │                │                │               │            │             │
   Dossier         Consensus        Contract       Execution     Code +         Clean
   approved         approved          signed          Plan        Budgets      Delivery
-                                                   approved
+                                                    approved
 ```
 
 Each phase produces a concrete artifact that the next phase depends on. You cannot skip phases, and you cannot proceed without explicit approval.
