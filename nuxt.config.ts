@@ -36,6 +36,12 @@ export default defineNuxtConfig({
       ],
       link: [
         {
+          rel: 'alternate',
+          type: 'application/rss+xml',
+          title: 'Gangsta Agents Blog',
+          href: '/feed.xml',
+        },
+        {
           rel: 'icon',
           type: 'image/png',
           href: '/favicon-96x96.png',
@@ -57,7 +63,7 @@ export default defineNuxtConfig({
     preset: 'cloudflare-pages',
     prerender: {
       crawlLinks: true,
-      routes: ['/'],
+      routes: ['/', '/feed.xml'],
     },
   },
 
