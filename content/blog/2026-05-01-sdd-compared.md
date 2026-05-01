@@ -1,11 +1,9 @@
 ---
-title: I Compared Four Spec-Driven Development Frameworks
+title: Spec-Driven Development in 2026
 description: GitHub Spec Kit, OpenSpec, BMad Method, and Gangsta Agents all implement spec-first development but with different philosophies. Here's how they actually differ — and how to choose.
 date: 2026-05-01
 navigation: false
 ---
-
-# I Compared Four Spec-Driven Development Frameworks So You Don't Have To
 
 Ask Claude or Copilot to "add user authentication" and you'll get something. Whether that something matches what you actually need depends on twenty silent inferences the agent made: which auth pattern, which session strategy, which security level, which error handling. None of them written down. None of them reviewable. All of them yours to debug later.
 
