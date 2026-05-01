@@ -1,2 +1,5 @@
 /
-  Link: </llms.txt>; rel="describedby"; type="text/plain", </llms-full.txt>; rel="describedby"; type="text/plain", </sitemap.xml>; rel="describedby"; type="application/xml", </feed.xml>; rel="alternate"; type="application/rss+xml"; title="Gangsta Agents Blog"
+  Link: </llms.txt>; rel="describedby"; type="text/plain", </llms-full.txt>; rel="describedby"; type="text/plain", </sitemap.xml>; rel="describedby"; type="application/xml", </feed.xml>; rel="alternate"; type="application/rss+xml"; title="Gangsta Agents Blog", </.well-known/api-catalog>; rel="api-catalog"
+/.well-known/api-catalog
+  Content-Type: application/linkset+json; profile="https://www.rfc-editor.org/info/rfc9727"
+  Cache-Control: public, max-age=3600

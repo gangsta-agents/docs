@@ -1,0 +1,69 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://gangsta.page/.well-known/api-catalog",
+      "item": [
+        {
+          "href": "https://gangsta.page/llms.txt",
+          "type": "text/plain",
+          "title": "Gangsta Agents LLMs.txt — Machine-readable site index"
+        },
+        {
+          "href": "https://gangsta.page/llms-full.txt",
+          "type": "text/plain",
+          "title": "Gangsta Agents Full LLMs.txt — Complete documentation"
+        },
+        {
+          "href": "https://gangsta.page/feed.xml",
+          "type": "application/rss+xml",
+          "title": "Gangsta Agents Blog RSS Feed"
+        }
+      ],
+      "service-desc": [
+        {
+          "href": "https://gangsta.page/.well-known/skills/",
+          "type": "application/json",
+          "title": "Gangsta Agents Skills — Agent Skill discovery endpoint"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://gangsta.page/getting-started",
+          "type": "text/html",
+          "title": "Getting Started"
+        },
+        {
+          "href": "https://gangsta.page/heist-pipeline",
+          "type": "text/html",
+          "title": "The Heist Pipeline"
+        },
+        {
+          "href": "https://gangsta.page/core-concepts",
+          "type": "text/html",
+          "title": "Core Concepts"
+        },
+        {
+          "href": "https://gangsta.page/advanced",
+          "type": "text/html",
+          "title": "Advanced Topics"
+        },
+        {
+          "href": "https://gangsta.page/skills",
+          "type": "text/html",
+          "title": "Skills Reference"
+        },
+        {
+          "href": "https://gangsta.page/glossary",
+          "type": "text/html",
+          "title": "Glossary"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://gangsta.page/",
+          "type": "text/html"
+        }
+      ]
+    }
+  ]
+}
