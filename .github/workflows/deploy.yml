@@ -29,10 +29,7 @@ jobs:
           cache: 'npm' # caches ~/.npm (tarball cache), compatible with npm ci
 
       - name: Install dependencies
-        # --ignore-scripts skips the better-sqlite3 native compile, which is
-        # unused by the static build (Nuxt generate) and fails on runners
-        # without a C++ toolchain / matching prebuilt binary.
-        run: npm ci --ignore-scripts
+        run: npm ci
 
       - name: Sync skills from GitHub
         run: npm run sync
