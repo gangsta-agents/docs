@@ -2,7 +2,7 @@
 
 Official documentation for [Gangsta Agents](https://github.com/gangsta-agents/gangsta) — the spec-driven development framework for AI agents.
 
-Covers the Heist Pipeline (6-phase development cycle), the Borgata hierarchy, Omerta governance laws, the Ledger, skills, and autonomous mode with slash commands (`/gangsta:heist`, `/gangsta:go`, `/gangsta:abort`).
+Covers the Heist Pipeline (6-phase development cycle), the Borgata hierarchy, Omerta governance laws, the Ledger, and skills.
 
 Built with [Docus](https://docus.dev/) and deployed to [gangsta.page](https://gangsta.page).
 
@@ -50,7 +50,7 @@ A GitHub webhook triggers rebuilds when skill files change upstream.
 │   ├── 2.core-concepts/      # Borgata, Heist, Omerta, Ledger, etc.
 │   ├── 3.heist-pipeline/    # 6-phase deep-dives
 │   ├── 4.skills/            # Auto-generated skill docs (from sync)
-│   └── 5.advanced/          # Autonomous mode, custom skills, multi-agent, contributing
+│   └── 5.advanced/          # Custom skills, multi-agent, checkpoint recovery, contributing
 ├── scripts/
 │   └── sync-skills.ts       # GitHub → skills/ + content/4.skills/
 ├── app.config.ts            # Docus configuration

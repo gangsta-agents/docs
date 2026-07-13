@@ -38,13 +38,13 @@ Each phase has a **gate** — the Don (you) must approve before moving to the ne
 
 [Explore the full Heist Pipeline →](/heist-pipeline)
 
-## 20 Skills, 5 Platforms
+## 19 Skills, 6 Platforms
 
-Gangsta Agents provides **20 skills** across three categories:
+Gangsta Agents provides **19 skills** across three categories:
 
 | Category | Skills | Purpose |
 |----------|--------|---------|
-| **Hierarchy Roles** | `the-consigliere`, `the-underboss`, `the-capo`, `the-ledger`, `omerta` | Organization and governance |
+| **Hierarchy Roles** | `using-gangsta`, `the-consigliere`, `the-underboss`, `the-capo`, `the-ledger`, `omerta` | Framework entry point, organization, and governance |
 | **Heist Phases** | `reconnaissance`, `the-grilling`, `the-sit-down`, `resource-development`, `the-hit`, `laundering` | Structured development cycles |
 | **Dev Skills** | `interrogation-debugging`, `drill-tdd`, `safehouse-worktrees`, `audit-review`, `receiving-orders`, `sweep-verification`, `exit-strategy` | Tactical development tools |
 

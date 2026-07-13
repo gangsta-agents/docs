@@ -25,7 +25,7 @@ Every feature development cycle in Gangsta Agents follows the same structured pr
 Gather intel on the codebase, requirements, dependencies, and existing patterns before writing a single line of code. [Explore Reconnaissance →](/heist-pipeline/reconnaissance)
 
 ### 2. The Grilling
-Run an adversarial debate between a proposer and a devil's advocate to stress-test designs before committing to implementation. [Explore The Grilling →](/heist-pipeline/the-grilling)
+Run a single-pass adversarial debate — Proposer, Devils-Advocate, and Synthesizer each run once — to stress-test the idea and design before committing to implementation. [Explore The Grilling →](/heist-pipeline/the-grilling)
 
 ### 3. The Sit-Down
 Draft the formal specification — no code allowed. The Contract becomes the binding spec that governs all subsequent implementation. [Explore The Sit-Down →](/heist-pipeline/the-sit-down)
@@ -49,31 +49,20 @@ Every phase ends with a **gate** — a checkpoint requiring the Don's explicit a
 
 ## Starting a Heist
 
-There are two ways to start a Heist:
-
-### Manual (Gated)
-
 Express a building intention to your AI tool:
 
 > "I want to add user notifications to my app"
 
 The 1% Rule triggers `gangsta:reconnaissance` automatically. From there, each phase flows into the next with your approval at every gate.
 
-### Autonomous Mode
+## Auto-Advance Exceptions
 
-Use the `/gangsta:heist` slash command to run phases 1–4 end-to-end without pausing at each gate:
+The pipeline pauses for your approval at every phase gate — **except two explicitly authorized transitions**:
 
-> `/gangsta:heist make a user notifications system with push notification delivery`
+1. **After The Sit-Down** — once you sign the Contract, the Heist auto-advances into Resource Development.
+2. **After The Hit** — once all Work Packages report complete, the Heist auto-advances into Laundering.
 
-The Don Proxy approves each gate on your behalf. When the Contract and Execution Plan are ready, you sign with `/gangsta:go` to execute phases 5–6. [Full Autonomous Mode docs →](/advanced/autonomous-mode)
-
-## Slash Commands
-
-| Command | Phases | Purpose |
-|---|---|---|
-| `/gangsta:heist <description>` | 1–4 | Run Reconnaissance through Resource Development autonomously |
-| `/gangsta:go [feature]` | 5–6 | Sign the Contract and execute The Hit + The Delivery |
-| `/gangsta:abort <feature>` | — | Halt the Heist and archive it |
+Every other transition waits for your explicit gate approval.
 
 ## Resuming a Heist
 

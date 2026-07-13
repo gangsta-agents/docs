@@ -184,7 +184,7 @@ Agentic framework for spec-driven development built on the organizational model 
 
 Gangsta is built on the principle of strict hierarchy and explicit gates — every decision is traceable to the contract, every agent answers only to its own level.
 
-Gangsta supports two modes: **manual mode** where the Don approves every phase gate, and **autonomous mode** where the entire pipeline runs end-to-end without human intervention. Choose based on the cost of failure for the task at hand.
+Gangsta runs a single **gated mode**: the Don approves every phase gate, and the pipeline pauses for sign-off at each transition (except two authorized auto-advance steps — after the Contract is signed and after The Hit completes). Choose based on the cost of failure for the task at hand.
 
 <img src="/pipeline-flow.svg" alt="The Gangsta Agents Heist Pipeline — 6 phases with Don-approved gates" style="width:100%;border-radius:4px;margin:1.5rem 0 2rem;" />
 
@@ -283,7 +283,7 @@ All four frameworks support autonomous execution — but the human control bound
 - **GitHub Spec Kit — Ralph Loop:** agent takes `tasks.md` and executes all tasks without stopping. Gates can be bypassed.
 - **OpenSpec — /opsx:apply:** executes all tasks sequentially. Minimal gates, maximum autonomy.
 - **BMad Method — Orchestrator:** orchestrator agent guides execution through phases. Adversarial review built in, but no named loop.
-- **Gangsta Agents — Two modes:** in manual mode, Soldiers execute Work Packages with strict gates before and after the phase; in autonomous mode, the entire 6-phase pipeline runs end-to-end without human approval.
+- **Gangsta Agents — Gated pipeline:** Workers execute Work Packages with strict Don-approved gates before and after each phase. The pipeline pauses for sign-off at every transition except two authorized auto-advance steps (after the Contract is signed, and after The Hit completes).
 
 ### Technical characteristics
 

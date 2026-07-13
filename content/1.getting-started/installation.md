@@ -15,6 +15,25 @@ Gangsta Agents is a skills framework — it doesn't run as a standalone applicat
 - An AI coding tool: Claude Code, GitHub Copilot, OpenCode, Codex, Gemini CLI, or Cursor
 - A project directory where you want to use Gangsta Agents
 
+## Universal Install
+
+The fastest way to install on any platform — including those without a native plugin — is the [skills CLI](https://github.com/vercel-labs/skills):
+
+```bash
+# Install into the current project
+npx skills add kucherenko/gangsta
+
+# Install globally (available across all projects)
+npx skills add kucherenko/gangsta --global
+
+# Install to a specific agent only
+npx skills add kucherenko/gangsta -a claude-code
+npx skills add kucherenko/gangsta -a opencode
+npx skills add kucherenko/gangsta -a cursor
+```
+
+This installs the full Gangsta Agents skill set into your agent's skills directory. Prefer this if your platform has no dedicated plugin below.
+
 ## Install for Your Platform
 
 ### Claude Code
@@ -126,7 +145,7 @@ This handles cloning, path configuration, and registration automatically.
 
 ### Cursor
 
-Cursor doesn't have a native Gangsta Agents plugin yet. Use the `skills` utility to install all skills directly:
+Cursor doesn't have a native Gangsta Agents plugin yet. Install via the [universal `npx skills add`](#universal-install) command:
 
 ```bash
 npx skills add https://github.com/kucherenko/gangsta
@@ -139,10 +158,6 @@ Use gangsta and build new feature
 ```
 
 Cursor will pick up the skills and invoke the right ones for the task.
-
-::callout{type="info" icon="i-lucide-info"}
-`npx skills add` is also an alternative installation method for any platform listed above, if you prefer a single-command setup over platform-specific steps.
-::
 
 ---
 

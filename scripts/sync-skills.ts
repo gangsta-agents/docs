@@ -187,7 +187,7 @@ navigation.icon: i-heroicons-bolt
 
 # Skills Reference
 
-Gangsta provides **20 skills** organized into three categories:
+Gangsta provides **19 skills** organized into three categories:
 
 ::callout{type="info"}
 Skills are automatically served at \`/.well-known/skills/\` for AI agent discovery.
