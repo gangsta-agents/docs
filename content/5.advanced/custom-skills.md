@@ -146,12 +146,26 @@ The main `SKILL.md` references these subagents in its process steps.
 
 ### OpenCode
 ```json
-// opencode.json
+// opencode.json (OpenCode 2.x)
+{
+  "skills": ["~/gangsta/skills", "./.gangsta/skills"]
+}
+```
+
+```json
+// opencode.json (OpenCode 1.x)
 {
   "skills": {
     "paths": ["~/gangsta/skills", "./.gangsta/skills"]
   }
 }
+```
+
+### Antigravity CLI
+```bash
+# Workspace skills are discovered from .agents/skills/
+mkdir -p .agents/skills
+cp -r ./skills/my-custom-skill .agents/skills/
 ```
 
 ### Codex

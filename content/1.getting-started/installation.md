@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: Install Gangsta Agents skills on Claude Code, GitHub Copilot, OpenCode, Codex, Gemini CLI, or Cursor.
+description: Install Gangsta Agents skills on Claude Code, GitHub Copilot, OpenCode, Codex, Gemini CLI, Antigravity CLI, or Cursor.
 navigation.order: 2
 ---
 Gangsta Agents is a skills framework — it doesn't run as a standalone application. Instead, you install it into your AI coding tool so the agent can invoke skills automatically. Choose your platform below.
@@ -12,7 +12,7 @@ Gangsta Agents is a skills framework — it doesn't run as a standalone applicat
 ## Prerequisites
 
 - Git
-- An AI coding tool: Claude Code, GitHub Copilot, OpenCode, Codex, Gemini CLI, or Cursor
+- An AI coding tool: Claude Code, GitHub Copilot, OpenCode, Codex, Gemini CLI, Antigravity CLI, or Cursor
 - A project directory where you want to use Gangsta Agents
 
 ## Universal Install
@@ -78,34 +78,35 @@ That's it — GitHub Copilot will fetch and register all Gangsta Agents skills a
 
 ### OpenCode
 
+Gangsta ships one plugin that supports both OpenCode generations. Check yours with `opencode --version`.
+
+**OpenCode 2.x**
+
+```bash
+opencode plugin add gangsta@git+https://github.com/kucherenko/gangsta.git
+```
+
+This installs the package and adds it to the `plugins` array of your global config. Restart OpenCode — skills and the Gangsta subagents are registered automatically. Equivalent manual config in `~/.config/opencode/opencode.json`:
+
+```json [opencode.json]
+{
+  "plugins": ["gangsta@git+https://github.com/kucherenko/gangsta.git"]
+}
+```
+
+**OpenCode 1.x** (1.4.0 or newer)
+
 Tell OpenCode in a new session:
 
 ```text [Prompt OpenCode]
 Fetch and follow instructions from https://raw.githubusercontent.com/kucherenko/gangsta/refs/heads/master/.opencode/INSTALL.md
 ```
 
-That's it — OpenCode will clone the repo, configure the plugin, and set up the skills path automatically.
+Or by hand: add `"plugin": ["gangsta@git+https://github.com/kucherenko/gangsta.git"]` to `~/.config/opencode/opencode.json`, then run `cd ~/.config/opencode && bun add gangsta@git+https://github.com/kucherenko/gangsta.git` and restart OpenCode.
 
-**Prefer a manual install?**
-
-::code-group
-
-```bash [1. Clone]
-git clone https://github.com/kucherenko/gangsta.git ~/.gangsta
-```
-
-```json [2. opencode.json]
-{
-  "plugin": ["gangsta@file:///Users/you/.gangsta"],
-  "skills": {
-    "paths": ["~/.gangsta/skills"]
-  }
-}
-```
-
+::callout{type="info" icon="i-lucide-info"}
+Migrating from 1.x to 2.x? Rename the `plugin` key to `plugins` and remove the `bun add`-installed copy with `cd ~/.config/opencode && bun remove gangsta`. OpenCode 2.x manages the package itself.
 ::
-
-Replace `/Users/you/.gangsta` with your actual clone path. The `~` shorthand works in `skills.paths`. Restart OpenCode after saving.
 
 ---
 
@@ -140,6 +141,21 @@ gemini extensions install https://github.com/kucherenko/gangsta
 ```
 
 This handles cloning, path configuration, and registration automatically.
+
+---
+
+### Antigravity CLI
+
+```bash
+agy plugin install https://github.com/kucherenko/gangsta
+```
+
+This installs the skills, the six Gangsta subagents (`associate`, `soldier`, `the-inspector`, `proposer`, `devils-advocate`, `synthesizer`), and an always-on rule that loads the Gangsta bootstrap into every session. Verify with:
+
+```bash
+agy plugin list
+agy agents
+```
 
 ---
 
@@ -194,6 +210,14 @@ git pull origin master
 gemini extensions update gangsta
 ```
 
+```bash [OpenCode 2.x]
+opencode plugin update
+```
+
+```bash [Antigravity CLI]
+agy plugin install https://github.com/kucherenko/gangsta
+```
+
 ::
 
 ::callout{type="warning" icon="i-lucide-refresh-cw"}
@@ -210,3 +234,5 @@ Always update before starting a new Heist. Skill definitions evolve, and using t
 | Gemini CLI extension not found | Ensure `gemini extensions install` completed without errors |
 | Claude Code plugin not found | Ensure marketplace was added before running `/plugin install` |
 | GitHub Copilot plugin not found | Ensure marketplace was added before running `copilot plugin install` |
+| OpenCode 2.x ignores the plugin | The config key is `plugins` (plural); `plugin` is read only by OpenCode 1.x |
+| Antigravity agents missing | Run `agy plugin list` — the plugin must show `6 agents, 1 rule`; reinstall if not |

@@ -68,7 +68,7 @@ Every agent knows its role. Every task has a phase. Every phase gate requires th
   #title
   Multi-Platform Support
   #description
-  Claude Code, GitHub Copilot, Gemini CLI, OpenCode, and Codex have native integrations. Cursor is supported via `npx skills add`.
+  Claude Code, GitHub Copilot, Gemini CLI, Antigravity CLI, OpenCode, and Codex have native integrations. Cursor is supported via `npx skills add`.
   :::
 
   :::u-page-feature{icon="i-lucide-book-open" to="/core-concepts/the-ledger"}

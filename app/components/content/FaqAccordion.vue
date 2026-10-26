@@ -14,7 +14,7 @@ const items = [
   },
   {
     label: 'Can I use Gangsta Agents with my existing AI setup?',
-    content: 'Yes. Gangsta Agents integrates with Claude Code, GitHub Copilot, Gemini CLI, OpenCode, and Codex natively. Cursor is supported via `npx skills add`. The framework is platform-agnostic — skills are pure markdown files that any agent can invoke.'
+    content: 'Yes. Gangsta Agents integrates with Claude Code, GitHub Copilot, Gemini CLI, Antigravity CLI, OpenCode, and Codex natively. Cursor is supported via `npx skills add`. The framework is platform-agnostic — skills are pure markdown files that any agent can invoke.'
   },
   {
     label: 'Is this just another AI framework?',

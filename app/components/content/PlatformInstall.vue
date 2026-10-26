@@ -35,11 +35,21 @@ const platforms = [
     icon: 'i-custom-opencode',
     status: 'supported',
     steps: [
+      { label: 'OpenCode 2.x — install plugin', code: 'opencode plugin add gangsta@git+https://github.com/kucherenko/gangsta.git' },
       {
-        label: 'Tell OpenCode in a new session',
+        label: 'OpenCode 1.x — tell OpenCode in a new session',
         code: 'Fetch and follow instructions from https://raw.githubusercontent.com/kucherenko/gangsta/refs/heads/master/.opencode/INSTALL.md',
         lang: 'text',
       },
+    ],
+  },
+  {
+    id: 'antigravity',
+    name: 'Antigravity CLI',
+    icon: 'i-lucide-orbit',
+    status: 'supported',
+    steps: [
+      { label: 'Install plugin', code: 'agy plugin install https://github.com/kucherenko/gangsta' },
     ],
   },
   {

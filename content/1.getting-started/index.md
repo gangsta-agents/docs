@@ -48,12 +48,14 @@ Gangsta Agents provides **19 skills** across three categories:
 | **Heist Phases** | `reconnaissance`, `the-grilling`, `the-sit-down`, `resource-development`, `the-hit`, `laundering` | Structured development cycles |
 | **Dev Skills** | `interrogation-debugging`, `drill-tdd`, `safehouse-worktrees`, `audit-review`, `receiving-orders`, `sweep-verification`, `exit-strategy` | Tactical development tools |
 
-These skills run on **5 platforms**:
+These skills run on **7 platforms**:
 
 - **Claude Code** — Original target, full skill support
-- **OpenCode** — Plugin-based integration
+- **GitHub Copilot** — Plugin marketplace install
+- **OpenCode** — Plugin-based integration (2.x and 1.x)
 - **Codex** — Skills directory symlink
 - **Gemini CLI** — Extension-based install
+- **Antigravity CLI** — Plugin install with an always-on bootstrap rule
 - **Cursor** — Follows Claude Code conventions
 
 [Install Gangsta Agents →](/getting-started/installation)
