@@ -7,7 +7,7 @@ const platforms = [
     status: 'supported',
     steps: [
       { label: 'Add marketplace', code: '/plugin marketplace add kucherenko/gangsta' },
-      { label: 'Install plugin', code: '/plugin install gangsta@gangsta' },
+      { label: 'Install plugin', code: '/plugin install gangsta@gangsta-marketplace' },
     ],
   },
   {
