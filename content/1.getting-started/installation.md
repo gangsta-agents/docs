@@ -47,7 +47,7 @@ Run these two slash commands inside Claude Code:
 ```
 
 ```bash [2. Install plugin]
-/plugin install gangsta@gangsta
+/plugin install gangsta@gangsta-marketplace
 ```
 
 ::
